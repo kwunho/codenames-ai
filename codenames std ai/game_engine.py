@@ -1,9 +1,15 @@
 import gensim.downloader as api
-wikigiga_300_vecs = api.load("glove-wiki-gigaword-300")
-twitter_200_vecs = api.load("glove-twitter-200")
 
-player_bot={'blue':twitter_200_vecs,
-            'red':wikigiga_300_vecs}
+#glove-wiki-gigaword-300
+#glove-twitter-200
+#fasttext-wiki-news-subwords-300
+#conceptnet-numberbatch-17-06-300
+
+red_model = api.load("glove-wiki-gigaword-300")
+blue_model = api.load("glove-twitter-200")
+
+player_bot={'blue':blue_model,
+            'red':red_model}
 
 print('Models loaded')
 import pickle
@@ -132,6 +138,7 @@ def game_intro():
 def game_loop():
     
     board,cur_team=gf.generate_board(word_list)
+    print(board)
 
     board_words=gf.get_board_words(board)
     shuffle(board_words)
