@@ -10,7 +10,7 @@ game_engine.py
 This contains the code to create and launch the game. Simply run this file and the game will launch in a new window. It does take 5-10 minutes to load. This is mainly due to loading the NLP models. If the program is being run for the first time, then the NLP models will be downloaded directly from gensim and stored on the local machine. 
 
 
-Here is an example of first few turns of a game.
+Here is an example of the first few turns of a game.
 The red bot (powered by wiki-gigaword) starts with the hint: **2 opera**.
 
 ![Screen Shot 2019-09-21 at 23 30 50](https://user-images.githubusercontent.com/37698146/65380095-b4205380-dccb-11e9-9916-1d54494b76b9.png)
